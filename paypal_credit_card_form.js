@@ -35,7 +35,6 @@ Template.paypalCreditCardForm.events({
     input.val(number);
     type = cardTypes[number.substring(0,1)];
     if (type !== undefined) {
-      console.log(type);
       $("#card-type").val(type);
     }
   }
@@ -99,7 +98,6 @@ Template.paypalCreditCardForm.validate = function(){
   }
 
   Session.set("PaypalCreditCardFormErrors", errors);
-  console.log(errors, data);
 
   return valid;
 };
